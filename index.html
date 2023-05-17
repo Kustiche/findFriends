@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>findFriends</title>
+</head>
+<body>
+  <div class="tabs">
+    <aside class="tabs__sidebar">
+      <img class="tabs__sidebar-title" src="img/FindFriends.svg" alt="FindFriend">
+      <a class="tabs__sidebar-item active">Questionnaires</a>
+      <a class="tabs__sidebar-item">Liked</a>
+    </aside>
+    <div class="tabs__content">
+      <div class="tabs__content-item">
+        <div class="tabs__content-inner">
+          <svg class="tabs__content-heart">
+          <use href="img/sprite.svg#heart"></use>
+          </svg>
+          <img class="tabs__content-img" src="img/man.jpg" alt="man">
+          <span class="tabs__content-text">30 y.o.</span>
+          <span class="tabs__content-text">Angel Jennings</span>
+          <a class="tabs__content-inner-arrow link-reset" href="#">
+            <svg class="tabs__content-arrow">
+            <use href="img/sprite.svg#arrow"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="tabs__content-item hidden content-tab2">
+        <div class="content-tab2__inner">
+          <div class="content-tab2__card">
+            <span class="tabs__content-text">Angel Jennings</span>
+            <span class="tabs__content-text">30 y.o.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
