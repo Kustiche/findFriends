@@ -16,25 +16,69 @@
     </aside>
     <div class="tabs__content">
       <div class="tabs__content-item">
-        <div class="tabs__content-inner">
-          <svg class="tabs__content-heart">
-          <use href="img/sprite.svg#heart"></use>
-          </svg>
-          <img class="tabs__content-img" src="img/man.jpg" alt="man">
-          <span class="tabs__content-text">30 y.o.</span>
-          <span class="tabs__content-text">Angel Jennings</span>
-          <a class="tabs__content-inner-arrow link-reset" href="#">
-            <svg class="tabs__content-arrow">
-            <use href="img/sprite.svg#arrow"></use>
-            </svg>
-          </a>
+        <div class="friends-card">
+          <div class="friends-card__inner">
+            <button class="friends-card__heart-inner btn-reset">
+              <svg class="friends-card__heart">
+                <use href="img/sprite.svg#heart"></use>
+              </svg>
+            </button>
+            <img class="friends-card__img" src="img/man.jpg" alt="man">
+            <span class="friends-card__text friends-card__text--age">30 y.o.</span>
+            <span class="friends-card__text friends-card__text--name">Angel Jennings</span>
+            <a class="friends-card__inner-arrow link-reset" href="#">
+              <svg class="friends-card__arrow">
+              <use href="img/sprite.svg#arrow"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="friends-card">
+          <div class="friends-card__inner">
+            <button class="friends-card__heart-inner btn-reset">
+              <svg class="friends-card__heart">
+                <use href="img/sprite.svg#heart"></use>
+              </svg>
+            </button>
+            <img class="friends-card__img" src="img/man.jpg" alt="man">
+            <span class="friends-card__text friends-card__text--age">20 y.o.</span>
+            <span class="friends-card__text friends-card__text--name">Angel Jes</span>
+            <a class="friends-card__inner-arrow link-reset" href="#">
+              <svg class="friends-card__arrow">
+              <use href="img/sprite.svg#arrow"></use>
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
-      <div class="tabs__content-item hidden content-tab2">
-        <div class="content-tab2__inner">
-          <div class="content-tab2__card">
-            <span class="tabs__content-text">Angel Jennings</span>
-            <span class="tabs__content-text">30 y.o.</span>
+      <div class="tabs__content-item hidden">
+        <div class="favorites">
+          <div class="favorites__card">
+            <img class="favorites__img" src="img/man.jpg" alt="man">
+            <button class="favorites__btn-delete btn-reset">
+              <img class="favorites__delete" src="img/delete.svg" alt="delete">
+            </button>
+            <div class="favorites__card-top">
+              <span class="favorites__name text">Angel Jennings</span>
+              <span class="favorites__age text">30 y.o.</span>
+            </div>
+            <div class="favorites__card-middle hidden">
+              <span class="favorites__street excerpt">Street: Lake Road, 650</span>
+              <span class="favorites__phone excerpt">Phone: (894)-112-3785</span>
+              <span class="favorites__email excerpt">Email: angel.jennings@example.com</span>
+            </div>
+            <div class="favorites__card-bottom">
+              <button class="favorites__btn btn-reset">
+                <img class="favorites__picture" src="img/more.svg" alt="more">
+              </button>
+              <button class="favorites__btn btn-reset hidden">
+                <img class="favorites__picture" src="img/hide.svg" alt="hide">
+              </button>
+              <div class="favorites__information">
+                <span class="favorites__location descr">New Zealand, Napier</span>
+                <span class="favorites__registered descr">Registered 8 years ago</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
