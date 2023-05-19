@@ -21,5 +21,5 @@ export function addArrayQuestionnaire(item) {
     return;
   };
 
-  render(name);
+  render();
 };
