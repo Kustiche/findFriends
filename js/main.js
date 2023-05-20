@@ -1,4 +1,4 @@
-import { heart, favoritesDelete, arrow } from "./view.js";
+import { heart, favoritesDelete, arrow, name } from "./view.js";
 import { tabs } from "./tabs.js";
 import { addArrayQuestionnaire } from "./addArrayQuestionnaire.js";
 import { friendAPI } from "./friendAPI.js";
@@ -11,10 +11,8 @@ arrow.addEventListener('click', () => {
 
 tabs();
 
-heart.forEach((item) => {
-  item.addEventListener('click', () => {
-    addArrayQuestionnaire(item);
-  });
+heart.addEventListener('click', () => {
+  addArrayQuestionnaire();
 });
 
 // favoritesDelete.forEach((favoriteDelete) => {

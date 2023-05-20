@@ -1,20 +1,17 @@
+import { heart, name, age } from "./view.js";
 import { favoritesArray } from "./favoritesArray.js"
 import { render } from "./render.js";
 
-export function addArrayQuestionnaire(item) {
-  const card = item.closest('.friends-card');
-  const itemName = card.querySelector('.friends-card__text--name');
-  const itemAge = card.querySelector('.friends-card__text--age');
+export function addArrayQuestionnaire() {
+  const questionnaireName = name.textContent;
+  const questionnaireAge = age.textContent;
 
-  const name = itemName.textContent;
-  const age = itemAge.textContent;
-
-  const questionnaire = favoritesArray.find((item) => item.name === name);
+  const questionnaire = favoritesArray.find((item) => item.name === questionnaireName);
 
   if (questionnaire === undefined) {
     favoritesArray.push({
-      name,
-      age
+      name: questionnaireName,
+      age: questionnaireAge
     });
   }else if (questionnaire.name === name) {
     alert('В избранном уже существует такая анкета!');
