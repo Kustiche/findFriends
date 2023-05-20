@@ -28,7 +28,7 @@ export function addQuestionnaire(questionnaireName) {
   favorites.prepend(card);
 
   img.classList.add('favorites__img');
-  img.src = 'img/man.jpg';
+  img.src = questionnaire.photo;
   card.prepend(img);
 
   button.classList.add('favorites__btn-delete', 'btn-reset');

@@ -99,9 +99,11 @@ body
       text-align: center
       leading-trim: both
       text-edge: cap
-      background-color: $mine
+      transition: background-color .4s
       &:last-child
         margin-bottom: 0
+      &:hover
+        background-color: $mine
 
       &.active
         background-color: $mine-shaft
@@ -139,6 +141,9 @@ body
     top: 15px
     left: 15px
     line-height: 0
+    transition: transform .4s
+    &:hover
+      transform: scale(80%)
 
   &__heart
     width: 42px
@@ -172,6 +177,9 @@ body
     background: linear-gradient(360deg, #E7E61A -79.42%, #B03535 230.01%)
     border-radius: 20px
     transform: translate(100%, -50%)
+    transition: transform .4s
+    &:hover
+      transform: translate(100%, -50%) scale(110%)
 
   &__arrow
     width: 27px

@@ -7,4 +7,3 @@ export const age = document.querySelector('.friends-card__text--age');
 export const photo = document.querySelector('.friends-card__img');
 export const arrow = document.querySelector('.friends-card__inner-arrow');
 export const heart = document.querySelector('.friends-card__heart');
-export const favoritesDelete = document.querySelectorAll('.favorites__delete');

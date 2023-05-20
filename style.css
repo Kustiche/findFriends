@@ -414,10 +414,13 @@ body {
   text-align: center;
   leading-trim: both;
   text-edge: cap;
-  background-color: #373737;
+  transition: background-color 0.4s;
 }
 .tabs__sidebar-item:last-child {
   margin-bottom: 0;
+}
+.tabs__sidebar-item:hover {
+  background-color: #373737;
 }
 .tabs__sidebar-item.active {
   background-color: #222222;
@@ -457,6 +460,10 @@ body {
   top: 15px;
   left: 15px;
   line-height: 0;
+  transition: transform 0.4s;
+}
+.friends-card__heart-inner:hover {
+  transform: scale(80%);
 }
 .friends-card__heart {
   width: 42px;
@@ -491,6 +498,10 @@ body {
   background: linear-gradient(360deg, #E7E61A -79.42%, #B03535 230.01%);
   border-radius: 20px;
   transform: translate(100%, -50%);
+  transition: transform 0.4s;
+}
+.friends-card__inner-arrow:hover {
+  transform: translate(100%, -50%) scale(110%);
 }
 .friends-card__arrow {
   width: 27px;
