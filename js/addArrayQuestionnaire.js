@@ -1,4 +1,4 @@
-import { heart, name, age } from "./view.js";
+import { name, age } from "./view.js";
 import { favoritesArray } from "./favoritesArray.js"
 import { render } from "./render.js";
 
@@ -13,7 +13,7 @@ export function addArrayQuestionnaire() {
       name: questionnaireName,
       age: questionnaireAge
     });
-  }else if (questionnaire.name === name) {
+  }else if (questionnaire.name === questionnaireName) {
     alert('В избранном уже существует такая анкета!');
     return;
   };
