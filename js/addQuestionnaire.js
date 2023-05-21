@@ -3,6 +3,7 @@ import { favoritesArray } from "./favoritesArray.js";
 
 export function addQuestionnaire(questionnaireName) {
   const questionnaire = favoritesArray.find((item) => item.name === questionnaireName);
+  const {name: favoriteName, age: favoriteAge, photo } = questionnaire;
 
   const card = document.createElement('div');
   const img = document.createElement('img');
@@ -28,7 +29,7 @@ export function addQuestionnaire(questionnaireName) {
   favorites.prepend(card);
 
   img.classList.add('favorites__img');
-  img.src = questionnaire.photo;
+  img.src = photo;
   card.prepend(img);
 
   button.classList.add('favorites__btn-delete', 'btn-reset');
@@ -44,11 +45,11 @@ export function addQuestionnaire(questionnaireName) {
 
   name.classList.add('favorites__name', 'text');
   cardTop.prepend(name);
-  name.textContent = questionnaire.name;
+  name.textContent = favoriteName;
 
   age.classList.add('favorites__age', 'text');
   cardTop.append(age);
-  age.textContent = questionnaire.age;
+  age.textContent = favoriteAge;
 
   cardMiddle.classList.add('favorites__card-middle', 'hidden');
   card.append(cardMiddle);
