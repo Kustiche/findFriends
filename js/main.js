@@ -5,6 +5,7 @@ import { friendAPI } from "./friendAPI.js";
 import { favoriteDelete } from "./favoriteDelete.js";
 import { favoritesArray, saveLocal } from "./favoritesArray.js";
 import { render } from "./render.js";
+import { openCard } from "./openCard.js";
 
 saveLocal();
 render();
@@ -25,6 +26,7 @@ heart.addEventListener('click', () => {
 
 favorites.addEventListener('click', (e) => {
   favoriteDelete(e);
+  openCard(e);
 
   localStorage.setItem('questionnairesArray', JSON.stringify(favoritesArray));
 })
