@@ -3,7 +3,7 @@ import { favoritesArray } from "./favoritesArray.js";
 
 export function addQuestionnaire(questionnaireName) {
   const questionnaire = favoritesArray.find((item) => item.name === questionnaireName);
-  const {name: favoriteName, age: favoriteAge, photo, location: locationText, registered: registeredAge} = questionnaire;
+  const {name: favoriteName, age: favoriteAge, photo, location: locationText, registered: registeredAge, street: streetText, phone: phoneText, email: emailText} = questionnaire;
 
   const card = document.createElement('div');
   const img = document.createElement('img');
@@ -53,15 +53,15 @@ export function addQuestionnaire(questionnaireName) {
 
   street.classList.add('favorites__street', 'excerpt');
   cardMiddle.prepend(street);
-  street.textContent = 'Street: Lake Road, 650';
+  street.textContent = `Street: ${streetText}`;
 
   phone.classList.add('favorites__phone', 'excerpt');
   cardMiddle.append(phone);
-  phone.textContent = 'Phone: (894)-112-3785';
+  phone.textContent = `Phone: ${phoneText}`;
 
   email.classList.add('favorites__email', 'excerpt');
   cardMiddle.append(email);
-  email.textContent = 'Email: angel.jennings@example.com';
+  email.textContent = `Email: ${emailText}`;
 
   cardBottom.classList.add('favorites__card-bottom');
   card.append(cardBottom);

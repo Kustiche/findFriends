@@ -1,7 +1,7 @@
 import { name, age, photo } from "./view.js";
 import { favoritesArray } from "./favoritesArray.js"
 import { render } from "./render.js";
-import { locationTextAPI, registeredAgeAPI } from "./friendAPI.js";
+import { emailAPI, locationTextAPI, phoneAPI, registeredAgeAPI, streetAPI } from "./friendAPI.js";
 
 export function addArrayQuestionnaire() {
   const questionnaireName = name.textContent;
@@ -15,7 +15,10 @@ export function addArrayQuestionnaire() {
       age: questionnaireAge,
       photo: photo.src,
       location: locationTextAPI,
-      registered: registeredAgeAPI
+      registered: registeredAgeAPI,
+      street: streetAPI,
+      phone: phoneAPI,
+      email: emailAPI,
     });
   }else if (questionnaire.name === questionnaireName) {
     alert('В избранном уже существует такая анкета!');

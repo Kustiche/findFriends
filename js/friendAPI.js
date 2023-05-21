@@ -1,6 +1,9 @@
 import { name, age, photo } from "./view.js";
 export let locationTextAPI = '';
 export let registeredAgeAPI = '';
+export let streetAPI = '';
+export let phoneAPI = '';
+export let emailAPI = '';
 const url = 'https://randomuser.me/api/?noinfo';
 
 export function friendAPI() {
@@ -14,7 +17,13 @@ export function friendAPI() {
       const resultPhoto = result.picture
       const resultLocation = result.location;
       const resultRegistered = result.registered;
+      const resultStreet = resultLocation.street;
+      const resultPhone = result.phone;
+      const resultEmail = result.email;
 
+      streetAPI = resultStreet.name;
+      phoneAPI = resultPhone;
+      emailAPI = resultEmail;
       registeredAgeAPI = resultRegistered.age;
       locationTextAPI = resultLocation.country + ', ' + resultLocation.sity;
       name.textContent = resultName.first + ' ' + resultName.title + ' ' + resultName.last;
