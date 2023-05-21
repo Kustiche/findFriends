@@ -1,17 +1,17 @@
 export function openCard(e) {
-  if (e.target.className === 'favorites__btn btn-reset' || e.target.className === 'favorites__picture') {
+  if (e.target.className === 'favorites__btn btn-reset') {
     const more = e.target;
     const card = more.closest('.favorites__card');
     const cardMiddle = card.querySelector('.favorites__card-middle');
+    const cardMore = card.querySelector('.favorites__btn')
 
-    if (card.className === 'favorites__card active') {
-      card.classList.add('active');
-      cardMiddle.classList.remove('hidden');
-      console.log(42);
+    card.classList.toggle('active');
+    cardMiddle.classList.toggle('hidden');
+
+    if (cardMore.textContent === 'More') {
+      cardMore.textContent = 'Hide';
     }else {
-      card.classList.remove('active');
-      cardMiddle.classList.add('hidden');
-      console.log(card.className);
+      cardMore.textContent = 'More';
     }
   };
 };
