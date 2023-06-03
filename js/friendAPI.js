@@ -12,9 +12,10 @@ export function friendAPI() {
     .then((response) => response.json())
     .then((data) => data.results[0])
     .then((result) => {
+      console.log(result);
       const resultName = result.name;
-      const resultAge = result.dob;
-      const resultPhoto = result.picture
+      const resultDob = result.dob;
+      const resultPhoto = result.picture;
       const resultLocation = result.location;
       const resultRegistered = result.registered;
       const resultStreet = resultLocation.street;
@@ -27,7 +28,7 @@ export function friendAPI() {
       registeredAgeAPI = resultRegistered.age;
       locationTextAPI = resultLocation.country + ', ' + resultLocation.sity;
       name.textContent = resultName.first + ' ' + resultName.title + ' ' + resultName.last;
-      age.textContent = resultAge.age;
+      age.textContent = resultDob.age;
       photo.src = resultPhoto.large;
     });
 };
