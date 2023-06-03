@@ -12,15 +12,15 @@ export function friendAPI() {
     .then((response) => response.json())
     .then((data) => data.results[0])
     .then((result) => {
-      console.log(result);
-      const resultName = result.name;
-      const resultDob = result.dob;
-      const resultPhoto = result.picture;
-      const resultLocation = result.location;
-      const resultRegistered = result.registered;
+      const {name: questionnaireName, dob, picture, location, registered, resultLocation: street, phone, email} = result;
+      const resultName = questionnaireName;
+      const resultDob = dob;
+      const resultPhoto = picture;
+      const resultLocation = location;
+      const resultRegistered = registered;
       const resultStreet = resultLocation.street;
-      const resultPhone = result.phone;
-      const resultEmail = result.email;
+      const resultPhone = phone;
+      const resultEmail = email;
 
       streetAPI = resultStreet.name;
       phoneAPI = resultPhone;
